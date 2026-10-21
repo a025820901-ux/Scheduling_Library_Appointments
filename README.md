@@ -25,8 +25,9 @@
 
 ## 🚀 הוראות התקנה והרצה
 
-כדי להריץ את הפרויקט במחשב האישי שלך, יש לעקוב אחר השלבים הבאים:
+כדי להריץ את הפרויקט במחשב האישי, יש לעקוב אחר השלבים הבאים:
 
 ### 1. שכפול המאגר (Clone)
 ```bash
-git clone [https://github.com/a025820901-ux/Scheduling_Library_Appointments.git](https://github.com/a025820901-ux/Scheduling_Library_Appointments.git)
+git clone \
+  [https://github.com/a025820901-ux/Scheduling_Library_Appointments.git](https://github.com/a025820901-ux/Scheduling_Library_Appointments.git)

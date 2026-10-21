@@ -12,6 +12,15 @@
   <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white">
   <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black">
   <img alt="Docker Compose" src="https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white">
+  <img alt="Port 3000" src="https://img.shields.io/badge/Port-3000-blueviolet">
+</p>
+
+<p align="center">
+  <a href="#-תכונות-עיקריות">תכונות</a> •
+  <a href="#️-טכנולוגיות">טכנולוגיות</a> •
+  <a href="#-התחלה-מהירה">התחלה מהירה</a> •
+  <a href="#-איך-משתמשים">שימוש</a> •
+  <a href="#-תרומה-לפרויקט">תרומה</a>
 </p>
 
 ---
@@ -66,7 +75,13 @@ cd Scheduling_Library_Appointments
 docker compose up --build
 ```
 
-לאחר שההרצה מסתיימת, פותחים בדפדפן את הכתובת (והפורט) שמוגדרים בקובץ `compose.yaml`.
+לאחר שההרצה מסתיימת, האתר זמין בכתובת:
+
+<p align="center">
+  <a href="http://localhost:3000"><img alt="פתיחת האתר" src="https://img.shields.io/badge/🌐_פתיחת_האתר-localhost:3000-2ea44f?style=for-the-badge"></a>
+</p>
+
+> 💡 האתר רץ על פורט **3000**. אם הפורט תפוס במחשב שלכם, אפשר לשנות אותו בקובץ `compose.yaml`.
 
 לעצירה: `Ctrl + C`, ואז `docker compose down`.
 

@@ -1,0 +1,16 @@
+{
+  "short_name": "בין הדפים",
+  "name": "בין הדפים — הספרייה הקהילתית",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1d5b48",
+  "background_color": "#fbfaf6"
+}

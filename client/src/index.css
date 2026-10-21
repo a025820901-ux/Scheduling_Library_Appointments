@@ -1,0 +1,70 @@
+:root {
+  --ink: #18352f;
+  --muted: #71827a;
+  --green: #1d5b48;
+  --green-dark: #153e34;
+  --mint: #e7f1e9;
+  --paper: #fbfaf6;
+  --white: #ffffff;
+  --orange: #f1a45b;
+  --line: #e7e9e1;
+  --danger: #b84b45;
+  font-family: 'Heebo', 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  direction: rtl;
+  background:
+    radial-gradient(ellipse at 8% 6%, rgba(228, 238, 222, 0.72), transparent 26rem),
+    var(--paper);
+}
+
+body,
+button,
+input,
+select {
+  font-family: 'Heebo', 'Segoe UI', sans-serif;
+}
+
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(241, 164, 91, 0.75);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--green-dark);
+  background: #f7d5ad;
+}

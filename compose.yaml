@@ -3,7 +3,7 @@ services:
     build:
       context: ./client
     ports:
-      - "3000:3000"
+      - "3000:80"
     depends_on:
       - server
 
@@ -11,7 +11,7 @@ services:
     build:
       context: ./server
     environment:
-      DATABASE_URI: mongodb://mongo:27017/library
+      DATABASE_URI: mongodb://root:${MONGO_ROOT_PASSWORD:?Set MONGO_ROOT_PASSWORD}@mongo:27017/library?authSource=admin
       PORT: 4444
     ports:
       - "4800:4444"
@@ -21,10 +21,18 @@ services:
 
   mongo:
     image: mongo:7
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:?Set MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: library
     volumes:
       - mongo-data:/data/db
     healthcheck:
-      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      test:
+        [
+          "CMD-SHELL",
+          "mongosh --quiet --username \"$${MONGO_INITDB_ROOT_USERNAME}\" --password \"$${MONGO_INITDB_ROOT_PASSWORD}\" --authenticationDatabase admin --eval \"db.adminCommand('ping').ok\""
+        ]
       interval: 5s
       timeout: 5s
       retries: 10
